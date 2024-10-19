@@ -11,7 +11,7 @@ const SignIn = () => {
 
 
      </Box >
-     <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-between",width:"1200px",margin:"auto",flexDirection:{xs:"column",lg:"row"}}}>
+     <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-between",width:"80%",margin:"auto",flexDirection:{xs:"column",lg:"row"}}}>
 <Box>
   <Box sx={{width:"450px",borderRadius:"40px",backgroundColor:"#FFFFFF40",marginTop:"50px",p:"50px"}}>
     <Typography className="sarpanch-regular" sx={{fontFamily:"'Roboto Serif'",textAlign:"center",fontSize:"50px",color:"#456789",mb:"30px"}}>Sign In</Typography>
