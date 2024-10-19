@@ -45,7 +45,11 @@ const SignIn = () => {
     <input value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder="Password" style={{width:"425px",padding:"0px 15px",backgroundColor:"#FFFFFF33",height:"70px",borderRadius:"15px",fontSize:"26px",marginTop:"19px",border:"2px solid black"}} />
 
 
+
+    <Button sx={{color:"white",backgroundColor:"#5555FF",borderRadius:"20px",width:"450px",marginTop:"30px",fontSize:"25px",paddingY:"16px"}}><Link to={"/dashboard/home"}>Sign In</Link></Button>
+
     <Button onClick={()=>Login()} sx={{color:"white",backgroundColor:"#5555FF",borderRadius:"20px",width:"450px",marginTop:"30px",fontSize:"25px",paddingY:"16px"}}>Sign In</Button>
+
    <Typography><Link to="/forgotpassword" style={{textDecoration:"none",display:"block",textAlign:"center",fontSize:"24px",color:"#0073FF",marginTop:"29px",fontFamily:""}}>Forgot password?</Link></Typography> 
     <hr style={{borderBottom:"1px solid black",marginTop:"32px"}} />
     <Typography sx={{textAlign:"center",fontSize:"26px",color:"rgba(69, 103, 137, 1)",marginTop:"45px"}}>Hasn’t any account?  <Link to="/signup" style={{textDecoration:"none",color:"#0073FF"}}>Sign Up</Link></Typography>
