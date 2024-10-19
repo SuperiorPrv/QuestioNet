@@ -5,13 +5,13 @@ import { Link } from "react-router-dom"
 const SignIn = () => {
   return (
     <>
-    <Box sx={{ background:"linear-gradient(to right , #A2D2FF , #CDB4DB )",maxWidth:"1920px",m:"auto",height:"900px"}}>
-     <Box>
+    <Box sx={{ background:"linear-gradient(to right , #A2D2FF , #CDB4DB )",m:"auto",height:{xs:"1600px",lg:"900px"}}}>
+     <Box sx={{maxWidth:"1440px",m:"auto"}}>
 <img style={{width:"326px",height:"64px",marginTop:"40px",marginLeft:"150px"}}  src={logo} alt="" />
 
 
-     </Box > 
-     <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-between",width:"1200px",margin:"auto"}}>
+     </Box >
+     <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-between",width:"1200px",margin:"auto",flexDirection:{xs:"column",lg:"row"}}}>
 <Box>
   <Box sx={{width:"450px",borderRadius:"40px",backgroundColor:"#FFFFFF40",marginTop:"50px",p:"50px"}}>
     <Typography className="sarpanch-regular" sx={{fontFamily:"'Roboto Serif'",textAlign:"center",fontSize:"50px",color:"#456789",mb:"30px"}}>Sign In</Typography>
