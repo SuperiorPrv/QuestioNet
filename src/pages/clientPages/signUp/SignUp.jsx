@@ -4,7 +4,7 @@ import LogoQuestioNet from "./img/image.png"
 import { Link } from "react-router-dom"
 
 const SignUp = () => {
-  return <Box sx={{ background:"linear-gradient(to right , #A2D2FF , #CDB4DB )" , maxWidth:"1920px" ,margin:"auto", padding:"20px"}}>
+  return <Box sx={{ background:"linear-gradient(to right , #A2D2FF , #CDB4DB )" ,height:"100vh", maxWidth:"1920px" ,margin:"auto", padding:"20px"}}>
     <Box sx={{display:"flex", margin:"auto", alignItems:"center", gap:"25px",justifyContent:"center" }}>
         <img style={{width:"255px" }} src={LogoQuestioNet} alt="" />
     </Box> <br />
