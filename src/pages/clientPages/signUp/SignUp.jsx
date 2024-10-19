@@ -1,5 +1,4 @@
-import { Box, Button, TextField, Typography } from "@mui/material"
-import logo from "../../../../public/logo.svg"
+import { Box, Button, Typography } from "@mui/material"
 import LogoQuestioNet from "./img/image.png"
 import { Link } from "react-router-dom"
 
@@ -11,7 +10,7 @@ const SignUp = () => {
     <Box sx={{margin:"auto", display:"flex", justifyContent:"center" }}>
       <Box sx={{backgroundColor:"#FFFFFF40", padding:{sm:"30px 70px", xs:"30px 40px"},  borderRadius:"20px",  textAlign:"center" }}>
         <Box sx={{mr:"10px"}}>
-        <Typography sx={{color:"#456789", fontSize:'40px',textAlign:"center", fontFamily:"initial"}}>Sign Up</Typography> <br />
+        <Typography sx={{color:"#456789", fontSize:'40px',textAlign:"center", fontFamily:"initial"}}>Sign up</Typography> <br />
       <input   style={{padding:"9px 10px", width:"99% ", fontSize:"20px", border:"2px solid #123456",backgroundColor:"#FFFFFF33", borderRadius:"7px", color:"#222222"}} placeholder="Username:" /> <br /> <br />
         <input style={{padding:"9px 10px ", width:"99% ", fontSize:"20px", border:"2px solid #123456",backgroundColor:"#FFFFFF33", borderRadius:"7px", color:"#222222" }} placeholder="Email:" /><br /> <br />
         <input style={{padding:"9px 10px ", width:"99% ", fontSize:"20px",border:"2px solid #123456", backgroundColor:"#FFFFFF33",borderRadius:"7px", color:"#222222"}} placeholder="Phone number:" /> <br /> <br />
