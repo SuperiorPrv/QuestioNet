@@ -11,9 +11,9 @@ const SignIn = () => {
 
 
      </Box > 
-     <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-between",width:"1350px"}}>
+     <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-between",width:"1350px",margin:"auto"}}>
 <Box>
-  <Box sx={{width:"450px",borderRadius:"40px",backgroundColor:"#FFFFFF40",marginTop:"50px",marginLeft:"150px",p:"50px"}}>
+  <Box sx={{width:"450px",borderRadius:"40px",backgroundColor:"#FFFFFF40",marginTop:"50px",p:"50px"}}>
     <Typography className="sarpanch-regular" sx={{fontFamily:"'Roboto Serif'",textAlign:"center",fontSize:"50px",color:"#456789",mb:"30px"}}>Sign In</Typography>
     <input type="text" placeholder="Username, email or phone number:" style={{width:"425px",padding:"0px 15px",backgroundColor:"#FFFFFF33",height:"70px",borderRadius:"15px",fontSize:"26px",border:"2px solid black"}} />
     <input type="text" placeholder="Password" style={{width:"425px",padding:"0px 15px",backgroundColor:"#FFFFFF33",height:"70px",borderRadius:"15px",fontSize:"26px",marginTop:"19px",border:"2px solid black"}} />
