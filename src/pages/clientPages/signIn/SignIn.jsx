@@ -5,14 +5,8 @@ import { Link } from "react-router-dom"
 const SignIn = () => {
   return (
     <>
-
     <Box sx={{ background:"linear-gradient(to right , #A2D2FF , #CDB4DB )",widthFull:"1440px",m:"auto",height:"900px"}}>
      <Box sx={{maxWidth:"1440px",m:"auto"}}>
-
-    <Box sx={{ background:"linear-gradient(to right , #A2D2FF , #CDB4DB )",maxWidth:"1920px",m:"auto",height:"900px"}}>
-     <Box > 
-
-      
 <img style={{width:"326px",height:"64px",marginTop:"40px",marginLeft:"150px"}}  src={logo} alt="" />
 
 
