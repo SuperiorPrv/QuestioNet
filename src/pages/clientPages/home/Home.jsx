@@ -89,7 +89,7 @@ deepen your understanding of the world around you.</Typography> <br />
       <Typography sx={{color:"#0C145C" , textAlign:"center", fontSize:"40px"}}>Most ranked peoples</Typography>
       <Typography sx={{color:"#0C145C" , textAlign:"center", fontSize:"20px"}}>List of the best people who help solve problems</Typography> <br /><br />
       {users.toSorted((a,b)=>a.rating-b.rating).map((e,i)=>{
-        if(i<5) {return <> <Box sx={{display:"flex", gap:"20px", alignItems:"center", justifyContent:"center", margin:"auto", fontSize:"19px"}} key={e.id}>
+        if(i<5) {return <> <Box data-aos="zoom-in-right"   data-aos-duration={`1${i+1}00`}  sx={{display:"flex", gap:"20px", alignItems:"center",  fontSize:"19px"}} key={e.id}>
           <Typography sx={{fontSize:"19px"}}>{i+1}</Typography>
           <Avatar src={e.avatar}></Avatar>
           <Typography sx={{fontSize:"19px", fontWeight:"600"}}>{e.username} ({e.rating} votes)</Typography>
