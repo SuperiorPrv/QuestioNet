@@ -24,7 +24,8 @@ const SignUp = () => {
         password: password,
         rating: 0,
         asks: 0,
-        answers: 0
+        answers: 0,
+        avatar: "https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg"
       }
       await axios.post(UsersAPI, Obj);
       localStorage.setItem("userID",Obj.id);
