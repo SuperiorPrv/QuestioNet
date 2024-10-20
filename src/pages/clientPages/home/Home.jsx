@@ -3,7 +3,7 @@ import imgQuestionAns from "./img/image.png"
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-const QuestionAPI = "https://questionet-data-server.glitch.me/api/asks"
+const QuestionAPI = "https://questionet-data-server.glitch.me/api/questions"
 const UsersAPI = "https://questionet-data-server.glitch.me/api/users"
 
 const Home = () => {
