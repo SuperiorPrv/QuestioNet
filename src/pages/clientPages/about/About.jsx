@@ -3,8 +3,11 @@ import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import imgAbout from "../../../../public/Frame 5.png"; 
+import { Link, useNavigate } from "react-router-dom";
 
 const About = () => {
+  let navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({
       duration: 1500, 
@@ -46,7 +49,7 @@ const About = () => {
           We believe in the power of questions to unlock new perspectives and drive intellectual growth. Our platform is designed to create an open space for inquiry, where individuals from diverse backgrounds come together to explore ideas, share knowledge, and challenge assumptions.
         </Typography>
         <Button sx={{ backgroundColor: "#9478E9", color: "white", borderRadius: "10px", padding: "18px 36px", fontSize: "18px", '&:hover': { backgroundColor: "#6A5ACD" } }}>
-          Get Involved
+          <Link style={{color:"white",textDecoration:"none"}} to={"/dashboard/about/#getInvolved"}>Get involved</Link>
         </Button>
       </Box>
 
@@ -73,7 +76,7 @@ const About = () => {
           Join the Conversation
         </Typography>
         <Typography sx={{ color: "#112C4A", fontSize: "22px", marginTop: "15px", marginBottom: "25px", lineHeight: "1.7" }}>
-          Whether you're here to ask questions or offer answers, your voice matters. Join a community of thoughtful individuals ready to dive into deep conversations and help each other grow. Together, we can explore the unknown and find answers to the questions that shape our world.
+          Whether youre here to ask questions or offer answers, your voice matters. Join a community of thoughtful individuals ready to dive into deep conversations and help each other grow. Together, we can explore the unknown and find answers to the questions that shape our world.
         </Typography>
       </Box>
 
@@ -113,26 +116,24 @@ const About = () => {
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap" }}>
          
-        {[1, 2, 3, 4].map((i) => (
+        {[{name:"Saidzoda Muhammad",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199878-y.jpg"}, {name:"Parviz Nurmuhammadov",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199879-y.jpg"}, {name:"Mulloev Muhammad",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199880-y.jpg"}].map((e,i) => (
             <Box key={i} data-aos="zoom-in-up" sx={{ textAlign: "center" }}>
               <Avatar
                 sx={{width: 120,height: 120,margin: "auto",transition: "transform 0.3s", '&:hover': { transform: "scale(1.1)" },
                 }}
-                src={`./img/team${i}.png`}
+                src={e.img}
                 alt={`Team member ${i}`}
               />
               <Typography sx={{ color: "#112C4A", fontSize: "24px", marginTop: "10px", fontWeight: "600" }}>
-                Team Member {i}
+                {e.name}
               </Typography>
-              <Typography sx={{ color: "#4A2E7B", fontSize: "20px" }}>
-                Role {i}
-              </Typography>
+             
             </Box>
           ))}
         </Box>
       </Box>
 
-      <Box
+      <Box id="getInvolved"
         data-aos="fade-up"
         sx={{border: "2px solid black",width: "50%",margin: "auto",padding: "50px",borderRadius: "20px",boxShadow: "0px 0px 25px white",textAlign: "center",transition: "transform 0.3s", '&:hover': { transform: "scale(1.02)" },
         }}

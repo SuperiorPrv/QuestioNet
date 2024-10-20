@@ -127,6 +127,7 @@ const QuestionsPage = () => {
             borderRadius: '15px',
             backgroundColor: '#fff',
             padding: '15px',
+            width:"95%"
           }}
         >
           <CardContent>
