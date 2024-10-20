@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
 
-const UsersAPI = "https://questionet-data-server.glitch.me/api/users";
+const API = "https://questionet-data-server.glitch.me/api/users";
 
 const SignIn = () => {
   const [login, setLogin] = useState("");
@@ -18,6 +18,7 @@ const SignIn = () => {
       let cnt=0;
       const { data } = await axios.get(UsersAPI);
       data.forEach(e => {
+        console.log(e.username);
         if((e.username == login || e.email == login || e.phonenumber == login) && e.password == password){
           localStorage.setItem("userID",e.id);
           navigate("/dashboard/home");
@@ -27,6 +28,7 @@ const SignIn = () => {
       if(cnt==0) alert("Wrong username or password!");
     } catch (error) {
       console.error(error);
+      
     }
   }
 
