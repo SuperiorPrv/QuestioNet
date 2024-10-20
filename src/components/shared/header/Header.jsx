@@ -1,13 +1,36 @@
 import Logo from "../../../../public/Frame 6.png"
 import { Link, useLocation } from "react-router-dom"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import MenuIcon from '@mui/icons-material/Menu';
 import { Avatar, Box, Button, Menu, MenuItem, Typography } from "@mui/material";
+import axios from "axios";
+
+const UsersAPI = "https://questionet-data-server.glitch.me/api/users";
 
 const Header = () => {
   const path=useLocation().pathname
   const [anchorEl, setAnchorEl] = useState(null);
+  const [username, setUsername] = useState("");
+  const [avatar, setAvatar] = useState("");
   const open = Boolean(anchorEl);
+
+  async function GetUser() {
+    try {
+      const {data} = await axios.get(UsersAPI);
+      data.forEach(e=>{
+        if(e.id==localStorage.getItem("userID")){
+          setUsername(e.username);
+          setAvatar(e.avatar);
+        }
+      })
+    } catch (error) {
+      console.error(error);
+      
+    }
+  }
+
+  useEffect(()=>{GetUser()},[]);
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -28,11 +51,11 @@ const Header = () => {
 
     </Typography>
     <Typography>
-    <Link style={path=="/dashboard/users"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/home"}>Users</Link>
+    <Link style={path=="/dashboard/users"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/users"}>Users</Link>
 
     </Typography>
     <Typography>
-    <Link style={path=="/dashboard/about  "?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/home"}>About</Link>
+    <Link style={path=="/dashboard/about  "?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/about"}>About</Link>
 
 
     </Typography>
@@ -60,8 +83,8 @@ const Header = () => {
       >
         <MenuItem onClick={handleClose} sx={{display:{xs:"block",sm:"none"}}}>
 <Box sx={{display:"flex",alignItems:"center",gap:"10px"}}>
-    <Avatar/>
-<Typography sx={{fontSize:"25px"}}>UserName</Typography>
+    <Avatar src={avatar}/>
+<Typography sx={{fontSize:"25px"}}>{username}</Typography>
 </Box>
 </MenuItem>
         <MenuItem onClick={handleClose}>
@@ -79,13 +102,13 @@ const Header = () => {
         </MenuItem>
         <MenuItem onClick={handleClose}>
         <Typography>
-    <Link style={path=="/dashboard/users"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/home"}>Users</Link>
+    <Link style={path=="/dashboard/users"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/users"}>Users</Link>
 
     </Typography>
         </MenuItem>
         <MenuItem onClick={handleClose}>
         <Typography>
-    <Link style={path=="/dashboard/about  "?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/home"}>About</Link>
+    <Link style={path=="/dashboard/about  "?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/about"}>About</Link>
 
 
     </Typography>
@@ -94,8 +117,8 @@ const Header = () => {
       </Menu>
 </Box>
   <Box sx={{display:{xs:"none",sm:"flex"},alignItems:"center",gap:"10px"}}>
-    <Avatar/>
-<Typography sx={{fontSize:"25px"}}>UserName</Typography>
+    <Avatar src={avatar}/>
+<Typography sx={{fontSize:"25px"}}>{username}</Typography>
   </Box>
 
 </Box>
