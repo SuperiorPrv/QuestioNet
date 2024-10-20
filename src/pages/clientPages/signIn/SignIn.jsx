@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
 
-const API = "https://questionet-data-server.glitch.me/api/users";
+const UsersAPI = "https://questionet-data-server.glitch.me/api/users";
 
 const SignIn = () => {
   const [login, setLogin] = useState("");
@@ -15,7 +15,7 @@ const SignIn = () => {
 
   async function Login(){
     try {
-      const { data } = await axios.get(API);
+      const { data } = await axios.get(UsersAPI);
       data.forEach(e => {
         console.log(e.username);
         if((e.username == login || e.email == login || e.phonenumber == login) && e.password == password){
