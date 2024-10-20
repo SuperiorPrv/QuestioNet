@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
 
-const API = "https://questionet-data-server.glitch.me/api/users";
+const UsersAPI = "https://questionet-data-server.glitch.me/api/users";
 
 const SignIn = () => {
   const [login, setLogin] = useState("");
