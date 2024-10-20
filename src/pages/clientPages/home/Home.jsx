@@ -67,7 +67,7 @@ deepen your understanding of the world around you.</Typography> <br />
       <Typography sx={{color:'#6A22CD', fontSize:'40px',  fontWeight:"700"}}>Current questions</Typography>
       <Box sx={{margin:"auto", justifyContent:"center", display:"block", padding:"20px" }}>
         {question.toSorted((a,b)=>a.date-b.date).map((e,i)=>{
-            if(i<3) {return <><Box sx={{width:"98%", backgroundColor:"white",  gap:"20px", borderRadius:"20px", padding:'20px', fontSize:"23px"}} key={e.id}>
+            if(i<3) {return <><Box data-aos="fade-right" data-aos-duration={`${i+1}000`} sx={{width:"98%", backgroundColor:"white",  gap:"20px", borderRadius:"20px", padding:'20px', fontSize:"23px"}} key={e.id}>
             <Box sx={{display:"flex", flexWrap:'wrap', justifyContent:"space-between", alignItems:"center" }}>
               <Box sx={{ backgroundColor:"white", display:"flex" ,alignItems:"center", flexWrap:'wrap', gap:"20px"}} >
                 <Avatar sx={{width:'40px'}} src={e.owner.avatar} alt="" />
@@ -77,8 +77,7 @@ deepen your understanding of the world around you.</Typography> <br />
               <Box>
                 <Typography sx={{color:'red', fontWeight:"800"}}>{e.votes} votes</Typography>
               </Box>
-            </Box> <br />
-            <Box sx={{display:"flex", flexWrap:'wrap', justifyContent:'space-between' }}>
+            </Box> <br />            <Box sx={{display:"flex", flexWrap:'wrap', justifyContent:'space-between' }}>
               <Typography sx={{color:'grey', fontWeight:"800"}} >{e.title}</Typography>
               <Typography sx={{color:"green", fontWeight:"800"}}>{e.answers.length} answers</Typography>
               </Box> 
