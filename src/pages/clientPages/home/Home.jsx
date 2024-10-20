@@ -38,7 +38,15 @@ const Home = () => {
 
   return (
   <Box sx={{background:"linear-gradient(to right , #A2D2FF , #CDB4DB )" ,padding:"20px 30px" }}>
+<<<<<<< HEAD
         <Box data-aos="fade-right" sx={{ display: "flex", flexWrap:"wrap",  justifyContent:"space-around", alignItems:"center", margin:"auto", gap:"20px",  padding:"20px 20px", width:"95%", borderRadius:'20px', backgroundColor:"#000EFF1A"}} >
+=======
+
+        <Box data-aos="fade-left"  sx={{ display: "flex", flexWrap:"wrap",  justifyContent:"space-around", alignItems:"center", margin:"auto", gap:"20px",  padding:"20px 20px", width:"95%", borderRadius:'20px', backgroundColor:"#000EFF1A"}} >
+      <Box  >
+      <Typography sx={{color:"#4A2E7B", fontSize:"40px"}} >
+        <Box sx={{ display: "flex", flexWrap:"wrap",  justifyContent:"space-around", alignItems:"center", margin:"auto", gap:"20px",  padding:"20px 20px", width:"95%", borderRadius:'20px', backgroundColor:"#000EFF1A"}} >
+>>>>>>> origin/master
       <Box >
       <Typography sx={{color:"#4A2E7B", fontSize:"40px", fontWeight:"700"}} >
       Discover new perspectives
@@ -83,7 +91,13 @@ deepen your understanding of the world around you.</Typography> <br />
               <Typography sx={{color:'grey', fontWeight:"800"}} >{e.title}</Typography>
               <Typography sx={{color:"green", fontWeight:"800"}}>{e.answers.length} answers</Typography>
               </Box> 
+<<<<<<< HEAD
             </Box>              <br /></>
+=======
+            </Box>
+
+              <br /></>
+>>>>>>> origin/master
           }})}
       </Box>
     </Box> <br /><br /><br />

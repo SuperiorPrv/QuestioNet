@@ -1,6 +1,6 @@
 import { Box, Button, Typography } from "@mui/material"
 import LogoQuestioNet from "./img/image.png"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
 
@@ -12,6 +12,7 @@ const SignUp = () => {
   let [email,setEmail]=useState("")
   let [phone,setPhone]=useState("")
   let [password,setPassword]=useState("")
+  const navigate = useNavigate();
   async function dob() {
     let obj={
       id:Date.now(),
@@ -20,13 +21,21 @@ const SignUp = () => {
       phone:phone,
       password:password,
       rating:0,
+<<<<<<< HEAD
 asks:0,
 answers:0,
 avatar:"",
 }
+=======
+      asks:0,
+      answers:0,
+      avatar:"https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg",
+    }
+>>>>>>> origin/master
 try {
-  let r=await axios.post(Api,obj)
-
+  await axios.post(Api,obj);
+  localStorage.setItem("userID",obj.id);
+  navigate("/dashboard/home");
 } catch (error) {
   console.error(error);
   
