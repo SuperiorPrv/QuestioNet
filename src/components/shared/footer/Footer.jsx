@@ -5,8 +5,11 @@ import imgTG from "./img/image.png"
 import imgMAIl from "./img/image copy.png"
 import imgFACEBOOK from "./img/image copy 2.png"
 
+
+
 const Footer = () => {
   const path=useLocation().pathname
+  
 
   return (
     <Box sx={{background:"#123456CC", padding:"20px 20px"}}>
