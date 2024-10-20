@@ -21,7 +21,7 @@ const Footer = () => {
 
   </Typography>
     <Typography>
-    <Link style={path=="/dashboard/question"?{fontWeight:"900",textDecoration:"none", color:"white"}:{fontWeight:"500",textDecoration:"none" ,  color:"white"}} to={"/dashboard/questions"}>Question</Link>
+    <Link style={path=="/dashboard/question"?{fontWeight:"900",textDecoration:"none", color:"white"}:{fontWeight:"500",textDecoration:"none" ,  color:"white"}} to={"/dashboard/question"}>Question</Link>
 
     </Typography>
     <Typography>
