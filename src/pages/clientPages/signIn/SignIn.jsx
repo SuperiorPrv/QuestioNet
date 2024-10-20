@@ -15,14 +15,17 @@ const SignIn = () => {
 
   async function Login(){
     try {
-      const { data } = await axios.get(API);
+      let cnt=0;
+      const { data } = await axios.get(UsersAPI);
       data.forEach(e => {
         console.log(e.username);
         if((e.username == login || e.email == login || e.phonenumber == login) && e.password == password){
           localStorage.setItem("userID",e.id);
           navigate("/dashboard/home");
+          cnt++;
         }
       });
+      if(cnt==0) alert("Wrong username or password!");
     } catch (error) {
       console.error(error);
       
