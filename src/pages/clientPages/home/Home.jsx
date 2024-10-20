@@ -11,8 +11,8 @@ const UsersAPI = "https://questionet-data-server.glitch.me/api/users"
 const Home = () => {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Продолжительность анимации (1 секунда)
-      once: true,     // Анимация запускается только один раз при прокрутке
+      duration: 1000, 
+      once: true,     
     });
   }, []);
 
