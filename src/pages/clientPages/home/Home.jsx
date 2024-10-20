@@ -69,7 +69,7 @@ deepen your understanding of the world around you.</Typography> <br />
     <Box sx={{backgroundColor:"#7A278A33", padding:"30px", borderRadius:"20px", width:'94%',ml:"13px" }}>
       <Typography sx={{color:'#6A22CD', fontSize:'40px',  fontWeight:"700"}}>Current questions</Typography>
       <Box sx={{margin:"auto", justifyContent:"center", display:"block", padding:"20px" }}>
-        {question.toSorted((a,b)=>a.date-b.date).map((e,i)=>{
+        {question.toSorted((a,b)=>b.date-a.date).map((e,i)=>{
             if(i<3) {return <><Box data-aos="fade-right" data-aos-duration={`${i+1}000`} sx={{width:"98%", backgroundColor:"white",  gap:"20px", borderRadius:"20px", padding:'20px', fontSize:"23px"}} key={e.id}>
             <Box sx={{display:"flex", flexWrap:'wrap', justifyContent:"space-between", alignItems:"center" }}>
               <Box sx={{ backgroundColor:"white", display:"flex" ,alignItems:"center", flexWrap:'wrap', gap:"20px"}} >
