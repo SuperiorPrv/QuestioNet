@@ -14,7 +14,10 @@ grow. Engage in discussions that push boundaries and <br />
 deepen your understanding of the world around you.</Typography> <br />
       <Button sx={{backgroundColor:"#9478E9", color:"white", borderRadius:"10px", padding:"15px", fontSize:'17px' }}>Get started</Button>
         </Box>
+        <Box sx={{display:{xs:"none",sm:"block"}}}>
+
         <img style={{width:"560px"}} src={imgQuestionAns} alt="" />
+        </Box>
       </Box> <br />
       
         <Box sx={{ display: "flex", flexWrap:"wrap",  justifyContent:"space-around", alignItems:"center", margin:"auto", gap:"20px",  padding:"20px 20px", width:"95%", borderRadius:'20px', backgroundColor:"#11AA7740"}} >

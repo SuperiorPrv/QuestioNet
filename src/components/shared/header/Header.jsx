@@ -58,7 +58,14 @@ const Header = () => {
           'aria-labelledby': 'basic-button',
         }}
       >
+        <MenuItem onClick={handleClose} sx={{display:{xs:"block",sm:"none"}}}>
+<Box sx={{display:"flex",alignItems:"center",gap:"10px"}}>
+    <Avatar/>
+<Typography sx={{fontSize:"25px"}}>UserName</Typography>
+</Box>
+</MenuItem>
         <MenuItem onClick={handleClose}>
+        
         <Typography>
     <Link style={path=="/dashboard/home"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/home"}>Home</Link>
 
@@ -86,7 +93,7 @@ const Header = () => {
 
       </Menu>
 </Box>
-  <Box sx={{display:"flex",alignItems:"center",gap:"10px"}}>
+  <Box sx={{display:{xs:"none",sm:"flex"},alignItems:"center",gap:"10px"}}>
     <Avatar/>
 <Typography sx={{fontSize:"25px"}}>UserName</Typography>
   </Box>

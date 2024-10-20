@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <Box sx={{background:"#123456CC", padding:"20px 20px"}}>
-      <Box sx={{display:"flex", justifyContent:"space-between", alignItems:"center", gap:"50px"}}>
+      <Box sx={{display:"flex", justifyContent:"space-between", flexWrap:"wrap", alignItems:"center", gap:"50px"}}>
         <img src={Logo} alt="" />
         <Box sx={{display:"flex",gap:"40px"}}>
   <Typography>
@@ -39,12 +39,12 @@ const Footer = () => {
       </Box> <br /> <br />
       <hr style={{ width: "80%", backgroundColor: 'white', height: "1px", margin:"auto" }} /> 
       <br />
-      <Box sx={{display:"flex",  alignItems:"center",  justifyContent:"space-between"}}>
+      <Box sx={{display:"flex", flexWrap:"wrap", gap:"30px",  alignItems:"center",  justifyContent:"space-between"}}>
         <Typography sx={{ color: "white" }}>QuestioNet@2024. All rights reserved</Typography>
-        <Box sx={{display:"flex", gap:"30px", alignItems:"center"}}>
-          <Link ><img style={{width:"50px"}} src={imgTG} alt="" /></Link>
-          <Link><img style={{width:"50px"}} src={imgMAIl} alt="" /></Link>
-          <Link><img style={{width:"50px"}} src={imgFACEBOOK} alt="" /></Link>
+        <Box sx={{display:"flex", flexWrap:"wrap", gap:"50px", alignItems:"center"}}>
+          <a href="https://web.telegram.org/k/"><img style={{width:"50px"}} src={imgTG} alt="" /></a>
+         <a href="https://www.google.com/intl/ru/gmail/about/"><img style={{width:"50px"}} src={imgMAIl} alt="" /></a>
+         <a href=" https://www.facebook.com/?locale=ru_RU"><img style={{width:"50px"}} src={imgFACEBOOK} alt="" /></a>
         </Box>
       </Box>
     </Box>
