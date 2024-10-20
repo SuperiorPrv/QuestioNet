@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useNavigate } from "react-router-dom";
 
 const QuestionAPI = "https://questionet-data-server.glitch.me/api/questions"
 const UsersAPI = "https://questionet-data-server.glitch.me/api/users"
@@ -20,6 +21,8 @@ const Home = () => {
 
   const [users, setUsers] = useState([]);
   const [question, setQuestion] = useState([]);
+
+  let navigate = useNavigate();
 
   async function Get(){
     try {
@@ -46,7 +49,7 @@ const Home = () => {
       <Typography sx={{color:"#112C4A", fontSize:"20px"}}>Here, every question is an opportunity to explore, learn, and  <br />
 grow. Engage in discussions that push boundaries and <br />
 deepen your understanding of the world around you.</Typography> <br />
-      <Button sx={{backgroundColor:"#9478E9", color:"white", borderRadius:"10px", padding:"15px", fontSize:'17px' }}>Get started</Button>
+      <Button onClick={()=>navigate("/dashboard/question")} sx={{backgroundColor:"#9478E9", color:"white", borderRadius:"10px", padding:"15px", fontSize:'17px' }}>Get started</Button>
         </Box>
         <Box sx={{display:{xs:"none",sm:"block"}}}>
         <img style={{width:"560px",borderRadius:"50px"}} src={imgQuestionAns} alt="" />
@@ -61,7 +64,7 @@ deepen your understanding of the world around you.</Typography> <br />
       <Typography sx={{color:"#112C4A", fontSize:"20px"}}>Our platform provides dialogues where questions lead to discovery. Connect  <br />
       with others, explore ideas, and grow through meaningful discussions.</Typography> <br />
         </Box>
-      <Button sx={{backgroundColor:"#11AA7799", color:"white", borderRadius:"10px", padding:"15px", fontSize:'17px' }}>Read more</Button>
+      <Button onClick={()=>navigate("/dashboard/about")} sx={{backgroundColor:"#11AA7799", color:"white", borderRadius:"10px", padding:"15px", fontSize:'17px' }}>Read more</Button>
     </Box> <br /><br />
     <Box sx={{backgroundColor:"#7A278A33", padding:"30px", borderRadius:"20px", width:'94%',ml:"13px" }}>
       <Typography sx={{color:'#6A22CD', fontSize:'40px',  fontWeight:"700"}}>Current questions</Typography>
@@ -86,7 +89,7 @@ deepen your understanding of the world around you.</Typography> <br />
     <Box sx={{border:"2px solid black", width:"35%", margin:"auto", padding:"30px", borderRadius:'20px', boxShadow:"0px 0px 15px white"}}>
       <Typography sx={{color:"#0C145C" , textAlign:"center", fontSize:"40px"}}>Most ranked peoples</Typography>
       <Typography sx={{color:"#0C145C" , textAlign:"center", fontSize:"20px"}}>List of the best people who help solve problems</Typography> <br /><br />
-      {users.toSorted((a,b)=>a.rating-b.rating).map((e,i)=>{
+      {users.toSorted((a,b)=>b.rating-a.rating).map((e,i)=>{
         if(i<5) {return <> <Box data-aos="zoom-in-right"   data-aos-duration={`1${i+1}00`}  sx={{display:"flex", gap:"20px", alignItems:"center",  fontSize:"19px"}} key={e.id}>
           <Typography sx={{fontSize:"19px"}}>{i+1}</Typography>
           <Avatar src={e.avatar}></Avatar>

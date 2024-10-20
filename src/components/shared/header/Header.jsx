@@ -55,7 +55,7 @@ const Header = () => {
 
     </Typography>
     <Typography>
-    <Link style={path=="/dashboard/about  "?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/about"}>About</Link>
+    <Link style={path=="/dashboard/about"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/about"}>About</Link>
 
 
     </Typography>
