@@ -113,20 +113,18 @@ const About = () => {
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap" }}>
          
-        {[1, 2, 3, 4].map((i) => (
+        {[{name:"Saidzoda Muhammad",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199878-y.jpg"}, {name:"Parviz Nurmuhammadov",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199879-y.jpg"}, {name:"Mulloev Muhammad",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199880-y.jpg"}].map((e,i) => (
             <Box key={i} data-aos="zoom-in-up" sx={{ textAlign: "center" }}>
               <Avatar
                 sx={{width: 120,height: 120,margin: "auto",transition: "transform 0.3s", '&:hover': { transform: "scale(1.1)" },
                 }}
-                src={`./img/team${i}.png`}
+                src={e.img}
                 alt={`Team member ${i}`}
               />
               <Typography sx={{ color: "#112C4A", fontSize: "24px", marginTop: "10px", fontWeight: "600" }}>
-                Team Member {i}
+                {e.name}
               </Typography>
-              <Typography sx={{ color: "#4A2E7B", fontSize: "20px" }}>
-                Role {i}
-              </Typography>
+             
             </Box>
           ))}
         </Box>

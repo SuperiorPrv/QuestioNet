@@ -52,6 +52,8 @@ const Users = () => {
                 <TableCell className="table-header">Name</TableCell>
                 <TableCell className="table-header">Email</TableCell>
                 <TableCell className="table-header">Phone Number</TableCell>
+                <TableCell className="table-header">Rating</TableCell>
+
               </TableRow>
             </TableHead>
             <TableBody>
@@ -61,6 +63,8 @@ const Users = () => {
                   <TableCell>{user.username}</TableCell>
                   <TableCell>{user.email}</TableCell>
                   <TableCell>{user.phone}</TableCell>
+                  <TableCell>{user.rating}</TableCell>
+
                 </TableRow>
               ))}
             </TableBody>
