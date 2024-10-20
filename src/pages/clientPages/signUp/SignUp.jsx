@@ -19,10 +19,10 @@ const SignUp = () => {
       email:email,
       phone:phone,
       password:password,
-      ratings:0,
+      rating:0,
 asks:0,
 answers:0,
-avatatar:"",
+avatar:"",
 }
 try {
   let r=await axios.post(Api,obj)
