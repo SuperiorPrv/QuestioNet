@@ -49,7 +49,7 @@ deepen your understanding of the world around you.</Typography> <br />
       <Button sx={{backgroundColor:"#9478E9", color:"white", borderRadius:"10px", padding:"15px", fontSize:'17px' }}>Get started</Button>
         </Box>
         <Box sx={{display:{xs:"none",sm:"block"}}}>
-        <img style={{width:"560px"}} src={imgQuestionAns} alt="" />
+        <img style={{width:"560px",borderRadius:"50px"}} src={imgQuestionAns} alt="" />
         </Box>
       </Box> <br />
       
