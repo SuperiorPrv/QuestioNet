@@ -21,15 +21,15 @@ const Footer = () => {
 
   </Typography>
     <Typography>
-    <Link style={path=="/dashboard/question"?{fontWeight:"900",textDecoration:"none", color:"white"}:{fontWeight:"500",textDecoration:"none" ,  color:"white"}} to={"/dashboard/"}>Question</Link>
+    <Link style={path=="/dashboard/question"?{fontWeight:"900",textDecoration:"none", color:"white"}:{fontWeight:"500",textDecoration:"none" ,  color:"white"}} to={"/dashboard/questions"}>Question</Link>
 
     </Typography>
     <Typography>
-    <Link style={path=="/dashboard/users"?{fontWeight:"900",textDecoration:"none", color:"white"}:{fontWeight:"500",textDecoration:"none",  color:"white"}} to={"/dashboard/home"}>Users</Link>
+    <Link style={path=="/dashboard/users"?{fontWeight:"900",textDecoration:"none", color:"white"}:{fontWeight:"500",textDecoration:"none",  color:"white"}} to={"/dashboard/users"}>Users</Link>
 
     </Typography>
     <Typography>
-    <Link style={path=="/dashboard/about  "?{fontWeight:"900",textDecoration:"none", color:"white"}:{fontWeight:"500",textDecoration:"none" ,  color:"white"}} to={"/dashboard/home"}>About</Link>
+    <Link style={path=="/dashboard/about"?{fontWeight:"900",textDecoration:"none", color:"white"}:{fontWeight:"500",textDecoration:"none" ,  color:"white"}} to={"/dashboard/about"}>About</Link>
 
 
     </Typography>
