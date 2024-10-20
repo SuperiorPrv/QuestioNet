@@ -70,8 +70,6 @@ deepen your understanding of the world around you.</Typography> <br />
             if(i<3) {return <><Box data-aos="fade-right" data-aos-duration={`${i+1}000`} sx={{width:"98%", backgroundColor:"white",  gap:"20px", borderRadius:"20px", padding:'20px', fontSize:"23px"}} key={e.id}>
             <Box sx={{display:"flex", flexWrap:'wrap', justifyContent:"space-between", alignItems:"center" }}>
               <Box sx={{ backgroundColor:"white", display:"flex" ,alignItems:"center", flexWrap:'wrap', gap:"20px"}} >
-                <Avatar sx={{width:'40px'}} src={e.owner.avatar} alt="" />
-                <Typography sx={{ fontSize:"22px", fontWeight:"500"  }}>{e.owner.username}</Typography>
                 <Typography sx={{color:"green", fontWeight:"700"}}>{new Date(e.date).toLocaleString()}</Typography>
               </Box>
               <Box>
@@ -92,7 +90,7 @@ deepen your understanding of the world around you.</Typography> <br />
         if(i<5) {return <> <Box sx={{display:"flex", gap:"20px", alignItems:"center", justifyContent:"center", margin:"auto", fontSize:"19px"}} key={e.id}>
           <Typography sx={{fontSize:"19px"}}>{i+1}</Typography>
           <Avatar src={e.avatar}></Avatar>
-          <Typography sx={{fontSize:"19px", fontWeight:"600"}}>{e.username} ({e.rating} votes)</Typography>
+          <Typography sx={{fontSize:"19px", fontWeight:"600"}}>{e.username} ({e.rating} points)</Typography>
         </Box> <br/> <br />
         </>}
       })}
