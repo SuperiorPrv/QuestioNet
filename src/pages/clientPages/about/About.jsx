@@ -3,10 +3,9 @@ import { useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import imgAbout from "../../../../public/Frame 5.png"; 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const About = () => {
-  let navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({
@@ -116,7 +115,7 @@ const About = () => {
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "center", gap: "40px", flexWrap: "wrap" }}>
          
-        {[{name:"Saidzoda Muhammad",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199878-y.jpg"}, {name:"Parviz Nurmuhammadov",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199879-y.jpg"}, {name:"Mulloev Muhammad",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199880-y.jpg"}].map((e,i) => (
+        {[{name:"Saidzoda Muhammad",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199878-y.jpg"}, {name:"Parviz Normahmadov",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199879-y.jpg"}, {name:"Mulloev Muhammad",img:"/src/pages/clientPages/about/img/telegram-cloud-photo-size-2-5235643676347199880-y.jpg"}].map((e,i) => (
             <Box key={i} data-aos="zoom-in-up" sx={{ textAlign: "center" }}>
               <Avatar
                 sx={{width: 120,height: 120,margin: "auto",transition: "transform 0.3s", '&:hover': { transform: "scale(1.1)" },
