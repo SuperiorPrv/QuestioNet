@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Box } from '@mui/material';
 import './Users.css';
@@ -42,7 +42,7 @@ const Users = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box className="table-container" sx={{ padding: 4 }}>
+      <Box sx={{ background: "linear-gradient(to right, #A2D2FF, #CDB4DB)", padding: 4 }}>
         <h1 className="table-title">Users</h1>
         <TableContainer component={Paper} elevation={3}>
           <Table>
@@ -70,6 +70,7 @@ const Users = () => {
             </TableBody>
           </Table>
         </TableContainer>
+        <br /><br /><br /><br /><br />
       </Box>
     </ThemeProvider>
   );
