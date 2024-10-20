@@ -146,7 +146,7 @@ const About = () => {
           Join our mission to transform the way people engage with questions, ideas, and knowledge. Together, we can inspire a new generation of thinkers.
         </Typography>
         <Button
-        onClick={()=>navigate("/")}
+        onClick={()=>navigate("/dashboard/question")}
           sx={{
             backgroundColor: "#9478E9",color: "white",borderRadius: "10px",padding: "20px",fontSize: "18px",transition: "background-color 0.3s, transform 0.3s",'&:hover': { backgroundColor: "#6A5ACD", transform: "scale(1.05)" },
           }}
