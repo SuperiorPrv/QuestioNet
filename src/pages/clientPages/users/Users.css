@@ -1,0 +1,45 @@
+.table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .table-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .table-header {
+    background-color: #4f46e5;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  
+  .table-row:hover {
+    background-color: #eef2ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .table-row {
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .table-cell {
+    padding: 16px;
+    color: #1f2937;
+  }
+  
+  .table-cell:hover {
+    color: #6366f1;
+  }
+  
+  
