@@ -26,6 +26,9 @@ const App = () => {
         {
           path:"/dashboard/home",
           element:<Home/>
+        },
+        {
+          path:"/dashboard/question"
         }
       ]
     }
