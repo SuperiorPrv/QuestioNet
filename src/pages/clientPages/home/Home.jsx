@@ -2,11 +2,26 @@ import { Avatar, Box, Button, Typography } from "@mui/material"
 import imgQuestionAns from "./img/image.png"
 import { useEffect, useState } from "react"
 import axios from "axios"
+import 'aos/dist/aos.css'; // Импортируем стили AOS
+import AOS from 'aos'; // Импортируем библиотеку
 
 const QuestionAPI = "https://questionet-data-server.glitch.me/api/asks"
 const UsersAPI = "https://questionet-data-server.glitch.me/api/users"
 
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Продолжительность анимации (1 секунда)
+      once: true,     // Анимация запускается только один раз при прокрутке
+    });
+  }, []);
+
+
+
+
+
+  
   const [users, setUsers] = useState([]);
   const [question, setQuestion] = useState([]);
 
@@ -27,8 +42,8 @@ const Home = () => {
 
   return (
   <Box sx={{background:"linear-gradient(to right , #A2D2FF , #CDB4DB )" ,padding:"20px 30px" }}>
-        <Box sx={{ display: "flex", flexWrap:"wrap",  justifyContent:"space-around", alignItems:"center", margin:"auto", gap:"20px",  padding:"20px 20px", width:"95%", borderRadius:'20px', backgroundColor:"#000EFF1A"}} >
-      <Box >
+        <Box data-aos="fade-left"  sx={{ display: "flex", flexWrap:"wrap",  justifyContent:"space-around", alignItems:"center", margin:"auto", gap:"20px",  padding:"20px 20px", width:"95%", borderRadius:'20px', backgroundColor:"#000EFF1A"}} >
+      <Box  >
       <Typography sx={{color:"#4A2E7B", fontSize:"40px"}} >
       Discover new perspectives
       </Typography>
@@ -43,7 +58,7 @@ deepen your understanding of the world around you.</Typography> <br />
         </Box>
       </Box> <br />
       
-        <Box sx={{ display: "flex", flexWrap:"wrap",  justifyContent:"space-around", alignItems:"center", margin:"auto", gap:"20px",  padding:"20px 20px", width:"95%", borderRadius:'20px', backgroundColor:"#11AA7740"}} >
+        <Box data-aos="fade-right" sx={{ display: "flex", flexWrap:"wrap",  justifyContent:"space-around", alignItems:"center", margin:"auto", gap:"20px",  padding:"20px 20px", width:"95%", borderRadius:'20px', backgroundColor:"#11AA7740"}} >
       <Box >
       <Typography sx={{color:"#4A2E7B", fontSize:"40px"}} >
       What we offer

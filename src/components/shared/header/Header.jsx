@@ -16,7 +16,7 @@ const Header = () => {
   };
   return (
    <>
-<Box sx={{display:"flex",alignItems:"center",justifyContent:"space-evenly",width:"80%",margin:"auto"}}>
+<Box sx={{display:"flex",alignItems:"center",justifyContent:"space-evenly",width:"100%",margin:"auto",background:"linear-gradient(to right , #A2D2FF , #CDB4DB )"}}>
   <Box><img src={Logo} alt="" /></Box>
   <Box sx={{display:{xs:"none",md:"flex"},gap:"10px"}}>
   <Typography>
@@ -24,7 +24,7 @@ const Header = () => {
 
   </Typography>
     <Typography>
-    <Link style={path=="/dashboard/question"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/home"}>Question</Link>
+    <Link style={path=="/dashboard/question"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/question"}>Question</Link>
 
     </Typography>
     <Typography>
@@ -73,7 +73,7 @@ const Header = () => {
         </MenuItem>
         <MenuItem onClick={handleClose}>
         <Typography>
-    <Link style={path=="/dashboard/question"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/home"}>Question</Link>
+    <Link style={path=="/dashboard/question"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/question"} >Question</Link>
 
     </Typography>
         </MenuItem>

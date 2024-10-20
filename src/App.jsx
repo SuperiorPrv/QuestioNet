@@ -4,6 +4,7 @@ import SignUp from "./pages/clientPages/signUp/SignUp"
 import ForgotPassword from "./pages/clientPages/forgotPassword/ForgotPassword"
 import Home from "./pages/clientPages/home/Home"
 import Dashboard from "./dashboard/Dashboard"
+import Question from "./pages/clientPages/question/Question"
 
 const App = () => {
   const router = createBrowserRouter([
@@ -28,7 +29,8 @@ const App = () => {
           element:<Home/>
         },
         {
-          path:"/dashboard/question"
+          path:"/dashboard/question",
+          element:<Question/>
         }
       ]
     }
