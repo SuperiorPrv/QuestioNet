@@ -41,7 +41,7 @@ const Header = () => {
    <>
 <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-evenly",width:"100%",margin:"auto",background:"linear-gradient(to right , #A2D2FF , #CDB4DB )"}}>
   <Box><img src={Logo} alt="" /></Box>
-  <Box sx={{display:{xs:"none",md:"flex"},gap:"10px"}}>
+  <Box sx={{display:{xs:"none",md:"flex"},gap:"30px"}}>
   <Typography>
     <Link style={path=="/dashboard/home"?{fontWeight:"900",textDecoration:"none"}:{fontWeight:"500",textDecoration:"none"}} to={"/dashboard/home"}>Home</Link>
 
