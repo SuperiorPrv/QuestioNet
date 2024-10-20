@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from "@mui/material"
 
 const Home = () => {
-  return (
+  return (``
   <Box sx={{background:"linear-gradient(to right , #A2D2FF , #CDB4DB )" ,padding:"20px 30px"}}>
         <Box sx={{ display: "flex", flexWrap:"wrap",  justifyContent:"space-around", margin:"auto", gap:"20px",  padding:"10px 20px", width:"95%", borderRadius:'20px', backgroundColor:"#000EFF1A"}} >
       <Box >

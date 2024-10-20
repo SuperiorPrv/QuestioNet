@@ -8,7 +8,7 @@ import axios from "axios"
 const API = "https://questionet-data-server.glitch.me/api/users";
 
 const SignIn = () => {
-  const [userName, setUserName] = useState("");
+  const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const SignIn = () => {
       const { data } = await axios.get(API);
       data.forEach(e => {
         console.log(e.username);
-        if(e.username == userName && e.password == password){
+        if((e.username == login || e.email == login || e.phonenumber == login) && e.password == password){
           localStorage.setItem("userID",e.id);
           navigate("/dashboard/home");
         }
@@ -41,12 +41,8 @@ const SignIn = () => {
 <Box>
   <Box sx={{width:"450px",borderRadius:"40px",backgroundColor:"#FFFFFF40",marginTop:"50px",p:"50px"}}>
     <Typography className="sarpanch-regular" sx={{fontFamily:"'Roboto Serif'",textAlign:"center",fontSize:"50px",color:"#456789",mb:"30px"}}>Sign in</Typography>
-    <input value={userName} onChange={(e)=>setUserName(e.target.value)} type="text" placeholder="Username, email or phone number:" style={{width:"425px",padding:"0px 15px",backgroundColor:"#FFFFFF33",height:"70px",borderRadius:"15px",fontSize:"26px",border:"2px solid black"}} />
+    <input value={login} onChange={(e)=>setLogin(e.target.value)} type="text" placeholder="Username, email or phone number:" style={{width:"425px",padding:"0px 15px",backgroundColor:"#FFFFFF33",height:"70px",borderRadius:"15px",fontSize:"26px",border:"2px solid black"}} />
     <input value={password} onChange={(e)=>setPassword(e.target.value)} type="text" placeholder="Password" style={{width:"425px",padding:"0px 15px",backgroundColor:"#FFFFFF33",height:"70px",borderRadius:"15px",fontSize:"26px",marginTop:"19px",border:"2px solid black"}} />
-
-
-
-    <Button sx={{color:"white",backgroundColor:"#5555FF",borderRadius:"20px",width:"450px",marginTop:"30px",fontSize:"25px",paddingY:"16px"}}><Link to={"/dashboard/home"}>Sign In</Link></Button>
 
     <Button onClick={()=>Login()} sx={{color:"white",backgroundColor:"#5555FF",borderRadius:"20px",width:"450px",marginTop:"30px",fontSize:"25px",paddingY:"16px"}}>Sign In</Button>
 
