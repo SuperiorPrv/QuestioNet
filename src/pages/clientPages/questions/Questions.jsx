@@ -16,7 +16,6 @@ const QuestionsPage = () => {
     fetchQuestions();
   }, []);
 
-  // Fetching questions from the API (async)
   const fetchQuestions = async () => {
     try {
       const response = await axios.get('https://questionet-data-server.glitch.me/api/questions');
@@ -26,7 +25,6 @@ const QuestionsPage = () => {
     }
   };
 
-  // Adding a new question (async)
   const handleAddQuestion = async () => {
     try {
       const newQuestionData = {
@@ -36,14 +34,13 @@ const QuestionsPage = () => {
         answers: [],
       };
       await axios.post('https://questionet-data-server.glitch.me/api/questions', newQuestionData);
-      setNewQuestion(''); // Clear input field
-      fetchQuestions(); // Refresh the questions list
+      setNewQuestion('');
+      fetchQuestions();
     } catch (error) {
       console.error('Error adding question:', error);
     }
   };
 
-  // Adding an answer to a question (async)
   const handleAddAnswer = async (questionId) => {
     try {
       const question = questions.find((q) => q.id === questionId);
@@ -51,17 +48,15 @@ const QuestionsPage = () => {
         ...question,
         answers: [...question.answers, newAnswer],
       };
-      // Save updated question with new answer to the server
       await axios.put(`https://questionet-data-server.glitch.me/api/questions/${questionId}`, updatedQuestion);
-      setNewAnswer(''); // Clear input field
-      setSelectedQuestionId(null); // Close the answer form
-      fetchQuestions(); // Refresh the questions list
+      setNewAnswer('');
+      setSelectedQuestionId(null);
+      fetchQuestions();
     } catch (error) {
       console.error('Error adding answer:', error);
     }
   };
 
-  // Voting for a question (async)
   const handleVote = async (questionId, type) => {
     try {
       const question = questions.find((q) => q.id === questionId);
@@ -70,24 +65,22 @@ const QuestionsPage = () => {
         ...question,
         votes: updatedVotes,
       };
-      // Update the votes on the server
       await axios.put(`https://questionet-data-server.glitch.me/api/questions/${questionId}`, updatedQuestion);
       const {data} = await axios.get(`https://questionet-data-server.glitch.me/api/users/${localStorage.getItem("userID")}`);
       data.rating += updatedVotes;
       await axios.put(`https://questionet-data-server.glitch.me/api/users/${localStorage.getItem("userID")}`,data);
-      fetchQuestions(); // Refresh the questions list
+      fetchQuestions();
     } catch (error) {
       console.error('Error voting:', error);
     }
   };
 
   return (
-    <Box sx={{ background: "linear-gradient(to right , #A2D2FF , #CDB4DB )", width: '100%', padding: '20px' }}>
+    <Box sx={{ background: "linear-gradient(to right , #A2D2FF , #CDB4DB )", width: '97%', padding: '20px' }}>
       <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', textAlign: 'center', color: '#333' }}>
         Questions
       </Typography>
 
-      {/* Form to add a new question */}
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 4 }}>
         <TextField
           label="Ask a new question"
@@ -116,7 +109,6 @@ const QuestionsPage = () => {
         </Button>
       </Box>
 
-      {/* List of questions */}
       {questions.map((question) => (
         <Card
           key={question.id}
@@ -152,7 +144,6 @@ const QuestionsPage = () => {
               </IconButton>
             </Box>
 
-            {/* Answer section */}
             <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 'bold', color: '#555', mt: 2 }}>
               Answers:
             </Typography>
@@ -162,7 +153,6 @@ const QuestionsPage = () => {
               </Typography>
             ))}
 
-            {/* Add an answer */}
             {selectedQuestionId === question.id ? (
               <Box>
                 <TextField
