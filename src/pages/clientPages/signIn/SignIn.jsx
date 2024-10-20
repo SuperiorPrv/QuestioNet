@@ -36,7 +36,7 @@ const SignIn = () => {
 <img style={{width:"326px",height:"64px",marginTop:"40px",marginLeft:"150px"}}  src={logo} alt="" />
 
 
-     </Box > 
+     </Box >
      <Box sx={{display:"flex",alignItems:"center",justifyContent:"space-between",width:"80%",margin:"auto",flexDirection:{xs:"column",lg:"row"}}}>
 <Box>
   <Box sx={{width:"450px",borderRadius:"40px",backgroundColor:"#FFFFFF40",marginTop:"50px",p:"50px"}}>
@@ -52,7 +52,7 @@ const SignIn = () => {
   </Box>
 </Box>
 <Box>
-  <Typography className="animate__animated animate__bounce" sx={{fontSize:"72px",fontFamily:"'Sarpanch'",fontWeight:"500",color:"rgba(0, 0, 0, 1)",}}> Welcome to <span style={{display:"block",color:"rgba(139, 0, 255, 1)"}}>QuestioNet</span></Typography>
+  <Typography sx={{fontSize:"72px",fontFamily:"'Sarpanch'",fontWeight:"500",color:"rgba(0, 0, 0, 1)",}}> Welcome to <span style={{display:"block",color:"rgba(139, 0, 255, 1)"}}>QuestioNet</span></Typography>
   <img src={logo2} style={{marginTop:"40px"}} alt="" />
 </Box>
       </Box> 
